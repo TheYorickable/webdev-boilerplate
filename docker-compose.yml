@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+    webserver:
+        build:
+            context: ./docker/webserver
+        ports:
+            - 80:80
+        volumes:
+            - ./:/var/www
+        tty: true
+        container_name: webserver
